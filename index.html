@@ -10,35 +10,35 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="container">
         <section class="grid grid-template-areas">
-            <div class="output">
-                <div class="previous" data-previous-operand></div>
-                <div class="current" data-current-operand></div>
-            </div>
+            <input id="input-value" disabled class="display">
 
-            <button class="clear" data-all-clear>AC</button>
-            <button data-delete>DEL</button>
-            <button class="operator" data-operator>%</button>
+            <button onclick="clearInput('')" class="item clear button-operations">AC</button>
+            <button onclick="invertValues('')" class="item plus-minus button-operations">+/-</button>
+            <button onclick="insertValues('%')" class="item percent button-operations">%</button>
+            <button onclick="insertValues('/')" class="item buttonision button-operations-right">÷</button>
 
-            <button class="number" data-number>7</button>
-            <button class="number" data-number>8</button>
-            <button class="number" data-number>9</button>
-            <button class="operator" data-operator>x</button>
+            <button onclick="insertValues('7')" class="item seven button-numbers">7</button>
+            <button onclick="insertValues('8')" class="item eight button-numbers">8</button>
+            <button onclick="insertValues('9')" class="item nine button-numbers">9</button>
+            <button onclick="insertValues('*')" class="item multiplication button-operations-right">x</button>
 
-            <button class="number" data-number>4</button>
-            <button class="number" data-number>5</button>
-            <button class="number" data-number>6</button>
-            <button class="operator" data-operator>-</button>
+            <button onclick="insertValues('4')" class="item four button-numbers">4</button>
+            <button onclick="insertValues('5')" class="item five button-numbers">5</button>
+            <button onclick="insertValues('6')" class="item six button-numbers">6</button>
+            <button onclick="insertValues('-')" class="item minus button-operations-right">-</button>
 
-            <button class="number" data-numbe>1</button>
-            <button class="number" data-number>2</button>
-            <button class="number" data-number>3</button>
-            <button class="operator" data-operator>+</button>
+            <button onclick="insertValues('1')" class="item one button-numbers">1</button>
+            <button onclick="insertValues('2')" class="item two button-numbers">2</button>
+            <button onclick="insertValues('3')" class="item three button-numbers">3</button>
+            <button onclick="insertValues('+')" class="item plus button-operations-right">+</button>
 
-            <button class="zero" data-number>0</button>
-            <button class="number" data-number>.</button>
-            <button class="operator" data-equal>=</button>
+            <button onclick="insertValues('0')" class="item zero button-numbers">0</button>
+            <button onclick="insertValues('.')" class="item point button-numbers">.</button>
+            <button onclick="calculate()" class="item equal button-operations-right">=</button>
+
+        </section>
     </div>
 </body>
 

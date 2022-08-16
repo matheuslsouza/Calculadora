@@ -1,7 +1,24 @@
-const numberButtons = document.querySelectorAll('[data-number]');
-const operationButtons = document.querySelectorAll('[data-operator]');
-const equalButtons = document.querySelector('[data-equal]');
-const deleteButtons = document.querySelector('[data-delete]');
-const previousOperand = document.querySelector('[data-previous-operand]');
-const clearteOperand = document.querySelector ('[data-current-operand]');
+function insertValues(num) {
+    const input = document.getElementById('input-value').value;
+    document.getElementById('input-value').value = input + num;
+}
 
+function calculate() {
+    const input = document.getElementById('input-value').value;
+    document.getElementById('input-value').value = eval(input);
+}
+
+function clearInput() {
+    document.getElementById('input-value').value = "";
+}
+
+function invertValues() {
+    calculate()
+    const input = document.getElementById('input-value').value;
+    document.getElementById('input-value').value = input * -1
+}
+
+function invertValue() {
+    const input = document.getElementById('input-value').value;
+    document.getElementById('input-value').value = insertValues(num) * (input / 100);
+}
